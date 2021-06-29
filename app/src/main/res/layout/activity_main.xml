@@ -7,6 +7,23 @@
     tools:context=".MainActivity">
     <ExpandableListView
         android:id="@+id/lvExp"
-        android:layout_height="match_parent"
-        android:layout_width="match_parent"/>
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnAppliedJob"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="@android:color/darker_gray"
+        android:text="Applied Job"
+        android:textColor="@android:color/black"
+        android:textSize="12sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lvExp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

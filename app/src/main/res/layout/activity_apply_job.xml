@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ApplyJobActivity">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="385dp"
+        android:layout_height="700dp"
+        android:elevation="100dp"
+        app:cardCornerRadius="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp">
+
+            <TextView
+                android:id="@+id/pesanan"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Apply Job"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="32sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.018"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/staticJobName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="32dp"
+                android:text="Job Name"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pesanan" />
+
+            <TextView
+                android:id="@+id/job_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="36dp"
+                android:text="Text View"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/pesanan" />
+
+            <TextView
+                android:id="@+id/staticCategory"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Job Category"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/staticJobName" />
+
+            <TextView
+                android:id="@+id/job_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Text View"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/job_name" />
+
+            <TextView
+                android:id="@+id/job_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Text View"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/job_category" />
+
+            <TextView
+                android:id="@+id/staticFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="14dp"
+                android:text="Job Fee"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/staticCategory" />
+
+            <TextView
+                android:id="@+id/staticPayMethod"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="26dp"
+                android:text="Payment Method"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/staticFee" />
+
+            <RadioGroup
+                android:id="@+id/radioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:layout_marginTop="20dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/staticPayMethod">
+
+                <RadioButton
+                    android:id="@+id/ewallet"
+                    android:layout_width="127dp"
+                    android:layout_height="wrap_content"
+                    android:minHeight="20dp"
+                    android:text="E-wallet"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+                <RadioButton
+                    android:id="@+id/bank"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:minHeight="20dp"
+                    android:text="Bank"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp" />
+
+            </RadioGroup>
+
+            <TextView
+                android:id="@+id/textCode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="Referral Code"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+
+            <EditText
+                android:id="@+id/referral_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:hint="Referral Code"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/radioGroup" />
+
+            <TextView
+                android:id="@+id/total_fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="Text View"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textCode" />
+
+            <TextView
+                android:id="@+id/staticTotalFee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="20dp"
+                android:text="Total Fee"
+                android:textColor="@android:color/darker_gray"
+                android:textSize="18sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textCode" />
+
+            <Button
+                android:id="@+id/btnCount"
+                android:layout_width="263dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="46dp"
+                android:layout_marginTop="76dp"
+                android:layout_marginEnd="46dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:text="COUNT"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/staticTotalFee" />
+
+            <Button
+                android:id="@+id/btnApply"
+                android:layout_width="264dp"
+                android:layout_height="47dp"
+                android:layout_gravity="center"
+                android:layout_marginStart="46dp"
+                android:layout_marginTop="152dp"
+                android:layout_marginEnd="46dp"
+                android:backgroundTint="@android:color/darker_gray"
+                android:text="APPLY NOW"
+                android:textColor="@android:color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/staticTotalFee" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+</androidx.constraintlayout.widget.ConstraintLayout>

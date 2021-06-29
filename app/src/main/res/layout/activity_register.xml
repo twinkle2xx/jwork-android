@@ -16,7 +16,7 @@
         android:ems="10"
         android:inputType="textEmailAddress"
         android:text="email"
-        android:textColor="#A3A3A3"
+        android:textColor="#888888"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -57,7 +57,8 @@
         android:layout_marginEnd="99dp"
         android:ems="10"
         android:inputType="textPersonName"
-        android:text="Name"
+        android:text="name"
+        android:textColor="#888888"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
