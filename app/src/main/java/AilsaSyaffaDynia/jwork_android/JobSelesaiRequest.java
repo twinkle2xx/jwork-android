@@ -23,10 +23,10 @@ public class JobSelesaiRequest extends StringRequest {
      * @param listener response dari objek pada view
      */
     public JobSelesaiRequest(String id, Response.Listener<String> listener){
-        super(Method.PUT, URL+id, listener, null);
+        super(Method.PUT, URL, listener, null);
         params = new HashMap<>();
         params.put("id", id);
-        params.put("status", "Finished");
+        params.put("invoiceStatus", "Finished");
     }
 
     /**

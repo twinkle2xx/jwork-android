@@ -45,43 +45,27 @@ public class LoginActivity extends AppCompatActivity {
         final TextView tvRegist = findViewById(R.id.tvRegist);
         final Button btRegist = findViewById(R.id.btRegist);
 
+        etEmail.setText("ailsa@ui.ac.id");
+        etPassword.setText("Ailsa123");
+
         /**
          * Saat tombol login ditekan, maka field password dan email akan diperiksa, apakah sesuai regex
          */
         btLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                String regexEmail = "^([\\w\\&\\*_~]+\\.{0,1})+@[\\w][\\w\\-]*(\\.[\\w\\-]+)+$";
-                String regexPassword = "^(?=.*\\d)(?=.*[a-z])(?=.*[A-Z]).{6,}$";
 
                 String email = etEmail.getText().toString();
                 String password = etPassword.getText().toString();
 
                 if(TextUtils.isEmpty(email)){
                     etEmail.setError("Email dibutuhkan");
-                    btLogin.setEnabled(true);
-                    return;
-                }
-
-                if(!Pattern.matches(regexEmail, email)){
-                    etEmail.setError("Email tidak valid");
-                    btLogin.setEnabled(true);
-                    return;
-                }
-
-                if(!Pattern.matches(regexPassword, password)){
-                    etPassword.setError("Password tidak valid");
-                    btLogin.setEnabled(true);
                     return;
                 }
 
                 if(TextUtils.isEmpty(password)){
                     etPassword.setError("Password dibutuhkan");
-                    btLogin.setEnabled(true);
                     return;
-                }
-                else{
-                    btLogin.setEnabled(false);
                 }
 
                 /**

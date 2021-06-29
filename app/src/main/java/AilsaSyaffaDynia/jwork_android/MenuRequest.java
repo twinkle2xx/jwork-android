@@ -22,14 +22,8 @@ public class MenuRequest extends StringRequest {
      * Menu request yang diminta pada MainActivity
      * @param listener response yang dilakukan dari objek pada view
      */
-    public MenuRequest(Job job, Response.Listener<String> listener){
+    public MenuRequest(Response.Listener<String> listener){
         super(Method.GET, URL, listener, null);
-        //params = new HashMap<>();
-        //params.put("id", String.valueOf(job.getId()));
-        //params.put("name", job.getName());
-        //params.put("recruiter", String.valueOf(job.getRecruiter()));
-        //params.put("fee", String.valueOf(job.getFee()));
-        //params.put("category", job.getCategory());
     }
 
     /**
@@ -39,6 +33,6 @@ public class MenuRequest extends StringRequest {
      */
     @Override
     protected Map<String, String> getParams() throws AuthFailureError {
-        return params;
+        return null;
     }
 }

@@ -23,10 +23,10 @@ public class JobBatalRequest extends StringRequest {
      * @param listener response dari objek yang ada pada view
      */
     public JobBatalRequest(String id, Response.Listener<String> listener) {
-        super(Method.PUT, URL + id, listener, null);
+        super(Method.PUT, URL, listener, null);
         params = new HashMap<>();
         params.put("id", id);
-        params.put("status", "Cancelled");
+        params.put("invoiceStatus", "Cancelled");
     }
 
     /**

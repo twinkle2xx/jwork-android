@@ -10,8 +10,8 @@
         android:label="jwork-android"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
         android:theme="@style/AppTheme">
-        android:usesCleartextTraffic="true">
         <activity android:name=".SelesaiJobActivity"></activity>
         <activity android:name=".ApplyJobActivity" />
         <activity android:name=".MainActivity" />

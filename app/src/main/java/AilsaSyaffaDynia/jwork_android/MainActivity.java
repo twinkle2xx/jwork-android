@@ -121,9 +121,7 @@ public class MainActivity extends AppCompatActivity {
                         for (Recruiter rec : listRecruiter) {
                             ArrayList<Job> temp = new ArrayList<>();
                             for (Job job2 : jobIdList) {
-                                if (job2.getRecruiter().getName().equals(rec.getName()) ||
-                                        job2.getRecruiter().getEmail().equals(rec.getEmail()) ||
-                                        job2.getRecruiter().getPhoneNumber().equals(rec.getPhoneNumber())) {
+                                if (job2.getRecruiter().getId() == rec.getId()) {
                                     temp.add(job2);
                                 }
                             }

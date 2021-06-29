@@ -14,7 +14,7 @@ import java.util.Map;
  */
 
 public class JobFetchRequest extends StringRequest {
-    private static final String URL = "http://10.0.2.2:8080/invoice/jobseeker/";
+    private static final String URL = "http://10.0.2.2:8080/invoice/Jobseeker/";
     private Map<String, String> params;
 
     /**

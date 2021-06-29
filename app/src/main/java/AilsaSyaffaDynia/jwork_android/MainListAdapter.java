@@ -125,7 +125,7 @@ public class MainListAdapter extends BaseExpandableListAdapter {
             convertView = layoutInflater.inflate(R.layout.layout_recruiter, null);
         }
 
-        TextView ListItem = (TextView) convertView.findViewById(R.id.lblListItem);
+        TextView ListItem = (TextView) convertView.findViewById(R.id.lblListHeader);
         ListItem.setTypeface(null, Typeface.BOLD);
         ListItem.setText("Recruiter " + headerTitle.getName());
 

@@ -139,39 +139,35 @@ public class SelesaiJobActivity extends AppCompatActivity {
                 }
                 try {
                     JSONArray jsonResponse = new JSONArray(response);
-                    for (int i = 0; i < jsonResponse.length(); i++) {
-                        JSONObject jsonInvoice = jsonResponse.getJSONObject(i);
-                        invoiceStatus = jsonInvoice.getString("invoiceStatus");
-                        jobSeekerInvoiceId = jsonInvoice.getInt("id");
-                        date = jsonInvoice.getString("date");
-                        paymentType = jsonInvoice.getString("paymentType");
-                        totalFee = jsonInvoice.getInt("totalFee");
-                        refCode = "---";
-                        try {
-                            bonus = jsonInvoice.getJSONObject("bonus");
-                            refCode = bonus.getString("referralCode");
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                        staticInvoiceId.setText("Invoice ID: "  + jobSeekerInvoiceId);
-                        tvInvoiceDate.setText(date.substring(0, 10));
-                        tvPaymentType.setText(paymentType);
-                        tvTotalFee.setText(String.valueOf(totalFee));
-                        tvInvoiceStatus.setText(invoiceStatus);
-                        tvRefCode.setText(refCode);
-
-                        JSONObject jsonCustomer = jsonInvoice.getJSONObject("jobseeker");
-                        jobSeekerName = jsonCustomer.getString("name");
-                        tvJobseekerName.setText(jobSeekerName);
-
-                        JSONArray jsonJobs = jsonInvoice.getJSONArray("jobs");
-                        for (int j = 0; j < jsonJobs.length(); j++) {
-                            JSONObject jsonJobObj = jsonJobs.getJSONObject(j);
-                            jobName = jsonJobObj.getString("name");
-                            staticJobName.setText(jobName);
-                            jobFee = jsonJobObj.getInt("fee");
-                            tvJobFee.setText(String.valueOf(jobFee));
-                        }
+                    JSONObject jsonInvoice = jsonResponse.getJSONObject(jsonResponse.length() - 1);
+                    invoiceStatus = jsonInvoice.getString("invoiceStatus");
+                    jobSeekerInvoiceId = jsonInvoice.getInt("id");
+                    date = jsonInvoice.getString("date");
+                    paymentType = jsonInvoice.getString("paymentType");
+                    totalFee = jsonInvoice.getInt("totalFee");
+                    refCode = "---";
+                    try {
+                        bonus = jsonInvoice.getJSONObject("bonus");
+                        refCode = bonus.getString("referralCode");
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+                    staticInvoiceId.setText("Invoice ID: "  + jobSeekerInvoiceId);
+                    tvInvoiceDate.setText(date.substring(0, 10));
+                    tvPaymentType.setText(paymentType);
+                    tvTotalFee.setText(String.valueOf(totalFee));
+                    tvInvoiceStatus.setText(invoiceStatus);
+                    tvRefCode.setText(refCode);
+                    JSONObject jsonCustomer = jsonInvoice.getJSONObject("jobseeker");
+                    jobSeekerName = jsonCustomer.getString("name");
+                    tvJobseekerName.setText(jobSeekerName);
+                    JSONArray jsonJobs = jsonInvoice.getJSONArray("jobs");
+                    for (int j = 0; j < jsonJobs.length(); j++) {
+                        JSONObject jsonJobObj = jsonJobs.getJSONObject(j);
+                        jobName = jsonJobObj.getString("name");
+                        staticJobName.setText(jobName);
+                        jobFee = jsonJobObj.getInt("fee");
+                        tvJobFee.setText(String.valueOf(jobFee));
                     }
                 } catch (JSONException e) {
                     e.printStackTrace();
